@@ -806,14 +806,14 @@ h1, h2, h3, h4, h5, h6 {
 	background: rgba(0,0,0,0.6);
 	transition: all 0.8s ease 0s;
 	opacity: 0;
-	&._open{
-		visibility: visible;
-		opacity: 1;
-		.popup__content {
-			top: 0;
-			left: 0;
-		}
-	}
+}
+.popup ._open{
+	visibility: visible;
+	opacity: 1;
+}
+.popup ._open .popup__content {
+	top: 0;
+	left: 0;
 }
 .popup__title {
 	font-size: 30px;
@@ -843,7 +843,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 10px;
 	right: 10px;
 	font-weight: 900;
-	&:hover{
-		color: red;
-	}
+}
+.popup__close:hover {
+	color: red;
 }
