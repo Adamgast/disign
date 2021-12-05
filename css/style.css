@@ -790,4 +790,60 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 0px;
   }
 }
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: rgba(0,0,0,0.6);
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+	&._open{
+		visibility: visible;
+		opacity: 1;
+		.popup__content {
+			top: 0;
+			left: 0;
+		}
+	}
+}
+.popup__title {
+	font-size: 30px;
+	line-height: 22px;
+	font-weight: 900;
+	margin-bottom: 22px;
+	color: #fff;
+}
+.popup__tel {
+	font-size: 28px;
+	line-height: 33px;
+	color: #fff;
+}
+.popup__content {
+	position: relative;
+	transition: all 0.8s ease 0s;
+	top: -100%;
+	left: -50%;
+	text-align: center;
+	max-width: 500px;
+	background: #888;
+	padding: 50px;
+}
 
+.popup__close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-weight: 900;
+	&:hover{
+		color: red;
+	}
+}
