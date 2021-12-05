@@ -799,6 +799,7 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	z-index: 20;
 	display: flex;
+	z-index: 4;
 	justify-content: center;
 	align-items: center;
 	visibility: hidden;
